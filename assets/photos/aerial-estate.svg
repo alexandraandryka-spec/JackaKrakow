@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Placeholder widoku osiedla z góry">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#274733"/>
+      <stop offset="0.55" stop-color="#6f8f62"/>
+      <stop offset="1" stop-color="#d8d0bb"/>
+    </linearGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <path d="M 0 0 L 0 56" stroke="rgba(255,255,255,0.22)" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)" opacity="0.55"/>
+  <path d="M-80 730 C250 555 520 535 810 420 C1060 320 1290 250 1680 130" fill="none" stroke="#d7d2c2" stroke-width="70" opacity="0.9"/>
+  <path d="M-30 250 C300 290 520 360 740 520 C910 640 1130 760 1640 795" fill="none" stroke="#b9b4a5" stroke-width="38" opacity="0.72"/>
+  <g opacity="0.9">
+    <rect x="610" y="300" width="280" height="72" rx="8" fill="#aab7bd"/>
+    <rect x="920" y="385" width="330" height="72" rx="8" fill="#aab7bd"/>
+    <rect x="525" y="500" width="360" height="72" rx="8" fill="#aab7bd"/>
+    <rect x="930" y="580" width="300" height="72" rx="8" fill="#aab7bd"/>
+  </g>
+  <g fill="#263b31" opacity="0.8">
+    <circle cx="350" cy="285" r="115"/>
+    <circle cx="275" cy="440" r="90"/>
+    <circle cx="1340" cy="230" r="120"/>
+    <circle cx="1260" cy="720" r="100"/>
+  </g>
+  <g>
+    <circle cx="765" cy="445" r="34" fill="#c79643"/>
+    <path d="M765 290 L787 445 L765 600 L743 445 Z" fill="#a7603e"/>
+  </g>
+  <rect x="450" y="706" width="700" height="92" rx="8" fill="rgba(23,32,27,0.78)"/>
+  <text x="800" y="755" text-anchor="middle" fill="#fff" font-family="Georgia, Times New Roman, serif" font-size="36" font-weight="700">miejsce na satelitarny widok osiedla</text>
+</svg>
