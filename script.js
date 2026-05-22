@@ -10,6 +10,30 @@ const prevButton = lightbox.querySelector(".lightbox-prev");
 const nextButton = lightbox.querySelector(".lightbox-next");
 let currentGalleryIndex = 0;
 
+const phoneRevealLinks = document.querySelectorAll(".phone-reveal");
+
+function revealPhoneNumbers() {
+  phoneRevealLinks.forEach((link) => {
+    const displayNumber = link.dataset.display;
+    const phoneNumber = link.dataset.phone;
+    link.textContent = `Zadzwoń: ${displayNumber}`;
+    link.href = `tel:${phoneNumber}`;
+    link.dataset.revealed = "true";
+    link.setAttribute("aria-label", `Zadzwoń: ${displayNumber}`);
+  });
+}
+
+phoneRevealLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (link.dataset.revealed === "true") {
+      return;
+    }
+
+    event.preventDefault();
+    revealPhoneNumbers();
+  });
+});
+
 function showGalleryImage(index) {
   currentGalleryIndex = (index + galleryItems.length) % galleryItems.length;
   const item = galleryItems[currentGalleryIndex];
