@@ -661,6 +661,10 @@ h2 {
   gap: 16px;
 }
 
+.arrangement-grid-pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .arrangement-card {
   margin: 0;
   overflow: hidden;
