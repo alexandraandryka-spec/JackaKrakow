@@ -577,6 +577,43 @@ h2 {
   font-weight: 700;
 }
 
+.current-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.85fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  margin: 0 0 24px;
+}
+
+.layout-figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.layout-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.layout-copy {
+  max-width: 620px;
+}
+
+.layout-copy h3 {
+  margin: 10px 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.05;
+}
+
+.layout-copy p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.72);
+}
+
 .plan {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -616,6 +653,46 @@ h2 {
 .room-list li strong {
   color: var(--white);
   min-width: 88px;
+}
+
+.arrangement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.arrangement-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 14px 34px rgba(17, 70, 58, 0.08);
+}
+
+.arrangement-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.arrangement-card figcaption {
+  display: grid;
+  gap: 8px;
+  min-height: 118px;
+  padding: 18px;
+}
+
+.arrangement-card strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45rem;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.arrangement-card span {
+  color: var(--muted);
 }
 
 .feature-grid {
@@ -1019,6 +1096,7 @@ h2 {
   }
 
   .hero-facts,
+  .arrangement-grid,
   .feature-grid,
   .contact-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1046,6 +1124,7 @@ h2 {
     position: static;
   }
 
+  .current-layout,
   .gallery-lead,
   .plan-grid,
   .arrangement-showcase {
@@ -1098,6 +1177,7 @@ h2 {
   }
 
   .hero-facts,
+  .arrangement-grid,
   .feature-grid,
   .details-grid,
   .gallery-grid,
