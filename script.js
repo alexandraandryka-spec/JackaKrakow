@@ -1,5 +1,5 @@
 const galleryItems = Array.from(document.querySelectorAll(".photo-slot")).filter((item) => {
-  return item.querySelector("img") && !item.classList.contains("photo-placeholder");
+  return item.querySelector("img");
 });
 
 const lightbox = document.querySelector("#lightbox");
@@ -38,7 +38,7 @@ function showGalleryImage(index) {
   currentGalleryIndex = (index + galleryItems.length) % galleryItems.length;
   const item = galleryItems[currentGalleryIndex];
   const image = item.querySelector("img");
-  const caption = item.querySelector("span")?.textContent || image.alt || "Zdjęcie mieszkania";
+  const caption = item.querySelector("span")?.textContent || image.alt || "Zdjęcie domu";
   lightboxImage.src = image.currentSrc || image.src;
   lightboxImage.alt = image.alt || caption;
   lightboxCaption.textContent = caption;
@@ -60,10 +60,10 @@ function closeLightbox() {
 }
 
 galleryItems.forEach((item, index) => {
-  const label = item.querySelector("span")?.textContent || "mieszkanie";
+  const label = item.querySelector("span")?.textContent || "dom";
   item.setAttribute("tabindex", "0");
   item.setAttribute("role", "button");
-  item.setAttribute("aria-label", `Powiększ zdjęcie: ${label}`);
+  item.setAttribute("aria-label", `Powiększ: ${label}`);
   item.addEventListener("click", () => openLightbox(index));
   item.addEventListener("keydown", (event) => {
     if (event.key === "Enter" || event.key === " ") {
