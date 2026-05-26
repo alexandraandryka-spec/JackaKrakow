@@ -514,6 +514,20 @@ h2 {
   background: var(--white);
 }
 
+.visualization-layout .section-head {
+  max-width: 860px;
+}
+
+.visualization-board {
+  min-height: 620px;
+  background: var(--white);
+}
+
+.visualization-board img {
+  object-fit: contain;
+  background: var(--white);
+}
+
 .location-overview,
 .location-layout {
   display: grid;
@@ -740,6 +754,7 @@ h2 {
   }
 
   .photo-main,
+  .visualization-board,
   .map-shell,
   .map-shell iframe {
     min-height: 420px;
